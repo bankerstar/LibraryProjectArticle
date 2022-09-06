@@ -5,7 +5,7 @@ import java.util.Date;
 public class Users {
     private int id;
     private String username;
-    private int nationalCode;
+    private String nationalCode;
     private Date birthday;
     private String password;
 
@@ -17,11 +17,11 @@ public class Users {
         this.username = username;
     }
 
-    public int getNationalCode() {
+    public String getNationalCode() {
         return nationalCode;
     }
 
-    public void setNationalCode(int nationalCode) {
+    public void setNationalCode(String nationalCode) {
         this.nationalCode = nationalCode;
     }
 
@@ -49,7 +49,7 @@ public class Users {
         this.id = id;
     }
 
-    public Users(int id, String username, int nationalCode, Date birthday, String password) {
+    public Users(int id, String username, String nationalCode, Date birthday, String password) {
         this.id = id;
         this.username = username;
         this.nationalCode = nationalCode;

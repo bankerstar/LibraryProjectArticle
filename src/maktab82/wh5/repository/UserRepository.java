@@ -33,16 +33,6 @@ public class UserRepository {
         return resultSet.getString(1);
     }
 
-    public String editPassword(int id, String password) throws SQLException {
-        String updateSql = "UPDATE users SET password=? WHERE id=?";
-        PreparedStatement preparedStatement = ApplicationConstant.getConnection().prepareStatement(updateSql);
-        preparedStatement.setString(1, password);
-        preparedStatement.setInt(2, id);
-        int indexUpdate = preparedStatement.executeUpdate();
-        String Output = indexUpdate + "update recorde";
-        return Output;
-    }
-
     public Users RegisterUserPassword(String userName, String nationalCode) throws SQLException {
         String insertSql = "INSERT INTO users (username,nationalCode,password) VALUES (?,?,?)";
         PreparedStatement preparedStatement = ApplicationConstant.getConnection().prepareStatement(insertSql);
